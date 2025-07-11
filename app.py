@@ -37,7 +37,7 @@ def insertar():
 
     def calificar(respuestas):
         # Eaqui se deberia recorrer las respuestas y calcular el puntaje
-        return 85
+        return 90
     
     puntaje = calificar(respuestas)
     nuevo_resultado = {
