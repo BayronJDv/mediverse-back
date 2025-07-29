@@ -32,14 +32,9 @@ def insertar():
     data = request.get_json()
     nombre = data.get('nombre')
     user_id = data.get('userId')
-    respuestas = data.get('respuestas', [])
+    puntaje = data.get('puntaje')
     imgurl = data.get('imgurl')
 
-    def calificar(respuestas):
-        # Eaqui se deberia recorrer las respuestas y calcular el puntaje
-        return 90
-    
-    puntaje = calificar(respuestas)
     nuevo_resultado = {
         'nombre': nombre,
         'user_id': user_id,
