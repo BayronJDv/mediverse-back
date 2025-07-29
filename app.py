@@ -12,12 +12,8 @@ app = Flask(__name__)
 # Leer variable de entorno para saber el entorno
 ENV = os.getenv("ENV", "dev")
 
-# Configurar CORS según entorno
-if ENV == "prod":
-    frontend_origin = os.getenv("FrontendOrigin")
-    CORS(app, origins=[frontend_origin])
-else:
-    CORS(app)
+
+CORS(app)
 
 app.config["MONGO_URI"] = os.getenv("MONGO_URI")
 mongo = PyMongo(app)
